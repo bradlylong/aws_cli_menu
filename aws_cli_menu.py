@@ -84,9 +84,6 @@ def s3_buckets():
 
     return console.print(table)
 
-def file_clean_up():
-    return os.remove('output.txt')
-
 def cloudwatch_alarms():
     table = Table(show_header=True, header_style="bold magenta")
     table.add_column("Name Space", style="bold blue")
@@ -113,6 +110,9 @@ def cloudwatch_alarms():
             )
 
     return console.print(table)
+
+def file_clean_up():
+    return os.remove('output.txt')
 
 if __name__=='__main__':
     while(True):
